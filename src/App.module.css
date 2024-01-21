@@ -1,0 +1,171 @@
+header {
+	background: var(--gray-700);
+	width: 100%;
+	height: 200px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	position: relative;
+}
+
+header > img {
+	width: 126px;
+	height: 125px;
+}
+
+.newTask {
+	width: 736px;
+	display: flex;
+	gap: 0.5rem;
+
+	position: absolute;
+	bottom: -1.5rem;
+}
+
+.newTask input {
+	width: 638px;
+	padding: 1rem;
+	background: var(--gray-500);
+	color: var(--gray-100);
+	border: 1px solid var(--gray-700);
+	border-radius: 8px;
+}
+
+.newTask input::placeholder {
+	color: var(--gray-300);
+}
+
+.newTask button {
+	padding: 1rem;
+	background: var(--blue-dark);
+	border-radius: 8px;
+	border: none;
+	font-weight: bold;
+	font-size: 0.875rem;
+	color: var(--gray-100);
+	cursor: pointer;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.newTask button:hover {
+	background: var(--blue);
+}
+
+header .hide {
+	display: none;
+}
+
+header .success,
+header .failed {
+	position: absolute;
+	bottom: -4rem;
+	padding: 0.2rem 5rem;
+	border-radius: 8px;
+}
+
+header .success {
+	background-color: var(--success);
+	color: var(--gray-100);
+}
+
+header .failed {
+	background-color: var(--danger);
+	color: var(--gray-100);
+}
+
+.content {
+	width: 736px;
+	margin: 5.7rem auto 0;
+}
+
+.infos {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1.5rem;
+}
+
+.infos p {
+	font-weight: bold;
+	font-size: 0.875rem;
+	color: var(--blue);
+
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.infos span {
+	background: var(--gray-400);
+	color: var(--gray-200);
+	border-radius: 999px;
+	padding: 2px 8px;
+}
+
+.empty {
+	padding: 4em 1.5rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	color: var(--gray-400);
+	border-top: 1px solid var(--gray-400);
+}
+
+.empty p {
+	color: var(--gray-300);
+	font-weight: 400;
+}
+
+.empty img + p {
+	margin-top: 1rem;
+	font-weight: bold;
+}
+
+.filled {
+	display: flex;
+	flex-direction: column;
+	gap: 0.875rem;
+	margin-bottom: 100px;
+}
+
+@media (max-width: 800px) {
+	.newTask {
+		width: 100%;
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+
+		position: absolute;
+		bottom: -6rem;
+	}
+
+	.newTask input {
+		width: 100%;
+	}
+
+	.newTask button {
+		width: 10rem;
+	}
+
+	header .success,
+	header .failed {
+		bottom: -8rem;
+	}
+
+	.content {
+		width: auto;
+		padding: 1rem;
+		margin-top: 8rem;
+	}
+}
